@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-
+//problem 1
 int sumOfNums(int x){
   int sum = 0;
   int i;
@@ -11,6 +11,15 @@ int sumOfNums(int x){
   }
   return sum;
 }
+
+//problem 2
+int sumOfEvenFib(int x){
+  int sum = 0;
+  int i;
+  for(i = 0; i < x; i ++){
+  }
+}
+
 
 int main(){
   int endSum1;
