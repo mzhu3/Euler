@@ -1,0 +1,50 @@
+#include <stdlib.h>
+#include <stdio.h>
+//problem 1
+int sumOfNums(int x){
+  int sum = 0;
+  int i;
+  for(i = 0; i < x; i++){
+    if(i % 3 == 0 || i % 5 ==0){
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+//problem 2
+int sumOfEvenFib(int x){
+  int first = 1;
+  int second = 2;
+  int next;
+  int sum = 0;
+  int temp1;
+  int temp2;
+  while(next < x){
+    if(next % 2 ==0){
+      sum += next;
+    }
+    else{
+      next = first + second;
+      first = second;
+      second = next;
+    }
+  }
+  return sum;
+}
+
+int main(){
+  int endSum1;
+  int endSum2;
+  int fibSum1;
+  int fibSum2;
+  endSum1 = sumOfNums(10);
+  endSum2 = sumOfNums(1000);
+  fibSum1 = sumOfEvenFib(10);
+  fibSum2 = sumOfEvenFib(4000000);
+  printf("3+5sum is : %d\n",endSum1);
+   printf("3+5sum is : %d\n",endSum2);
+     printf("Even Fib sum is : %d\n",fibSum1);
+   printf("Even Fib sum is : %d\n",fibSum2);
+}
+
